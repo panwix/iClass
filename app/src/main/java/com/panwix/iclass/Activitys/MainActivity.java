@@ -8,10 +8,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -28,7 +26,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends Activity implements Runnable, View.OnClickListener, AdapterView.OnItemClickListener{
@@ -126,7 +123,7 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.home_layout);
+		setContentView(R.layout.main);
 		// 有米广告
 		AdManager.getInstance(this).init("46babc13f03ce747", "abc60caa0489856f", false);
 		SpotManager.getInstance(this).loadSpotAds();
@@ -134,14 +131,14 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 				SpotManager.ORIENTATION_PORTRAIT);
 		SpotManager.getInstance(this).setAnimationType(SpotManager.ANIM_ADVANCE);
 		// 隐藏状态栏
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+//				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		// 设置DrawerLayout
-		setDrawerList();
+		//setDrawerList();
 
 		// 自定义ActionBar
-		setActionBar();
+		//setActionBar();
 
 //		// 开启ActionBar上APP ICON的功能
 //		getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -151,20 +148,20 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 		initAcivity();
 		SpotManager.getInstance(this).showSpotAds(this);
 		// 动态设置时间日期
-		handler = new Handler() {
-			public void handleMessage(Message msg) {
-				switch (msg.what){
-					case 100:
-						time.setText((String)msg.obj);
-						break;
-					case 101:
-						date.setText((String)msg.obj);
-						break;
-				}
-
-			}
-		};
-		new Thread(this).start();
+//		handler = new Handler() {
+//			public void handleMessage(Message msg) {
+//				switch (msg.what){
+//					case 100:
+//						time.setText((String)msg.obj);
+//						break;
+//					case 101:
+//						date.setText((String)msg.obj);
+//						break;
+//				}
+//
+//			}
+//		};
+//		new Thread(this).start();
 	}
 
 	// 获取当前日期
@@ -670,37 +667,37 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 	}
 
 	// DrawerLayout的具体实现
-	private void setDrawerList(){
-		mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-		mDrawerList = (ListView)findViewById(R.id.left_drawer);
-
-		ArrayList data = new ArrayList();
-		HashMap map = new HashMap();
-		map.put("itemImage", R.drawable.add);
-		data.add(map);
-
-		map = new HashMap();
-		map.put("itemImage", R.drawable.delete);
-		data.add(map);
-
-		map = new HashMap();
-		map.put("itemImage", R.drawable.search);
-		data.add(map);
-
-		map = new HashMap();
-		map.put("itemImage", R.drawable.setting);
-		data.add(map);
-
-		map = new HashMap();
-		map.put("itemImage", R.drawable.exit);
-		data.add(map);
-
-
-		adapter = new SimpleAdapter(this, data, R.layout.item_menu,
-				new String[]{"itemImage"},new int[]{R.id.item_image});
-		mDrawerList.setAdapter(adapter);
-		mDrawerList.setOnItemClickListener(this);
-	}
+//	private void setDrawerList(){
+//		mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+//		mDrawerList = (ListView)findViewById(R.id.left_drawer);
+//
+//		ArrayList data = new ArrayList();
+//		HashMap map = new HashMap();
+//		map.put("itemImage", R.drawable.add);
+//		data.add(map);
+//
+//		map = new HashMap();
+//		map.put("itemImage", R.drawable.delete);
+//		data.add(map);
+//
+//		map = new HashMap();
+//		map.put("itemImage", R.drawable.search);
+//		data.add(map);
+//
+//		map = new HashMap();
+//		map.put("itemImage", R.drawable.setting);
+//		data.add(map);
+//
+//		map = new HashMap();
+//		map.put("itemImage", R.drawable.exit);
+//		data.add(map);
+//
+//
+//		adapter = new SimpleAdapter(this, data, R.layout.item_menu,
+//				new String[]{"itemImage"},new int[]{R.id.item_image});
+//		mDrawerList.setAdapter(adapter);
+//		mDrawerList.setOnItemClickListener(this);
+//	}
 
 	// 自定义ActionBar
 	private void setActionBar(){
@@ -791,18 +788,18 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 		SharedPreferences sharedPreferences= getSharedPreferences("date",
 				Activity.MODE_PRIVATE);
 		// 使用getString方法获得value，注意第2个参数是value的默认值
-		String sDate =sharedPreferences.getString("date", "2015-8-1");
-		// 设置第几周
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-			Date d1=sdf.parse(sDate);
-			Date d2=new Date();
-			weekNum = getWeedNo(d1,d2);
-			String numStr = "第" + weekNum + "周";
-			week.setText(numStr);
-		} catch (ParseException e){
-			e.printStackTrace();
-		}
+//		String sDate =sharedPreferences.getString("date", "2015-8-1");
+//		// 设置第几周
+//		try {
+//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//			Date d1=sdf.parse(sDate);
+//			Date d2=new Date();
+//			weekNum = getWeedNo(d1,d2);
+//			String numStr = "第" + weekNum + "周";
+//			week.setText(numStr);
+//		} catch (ParseException e){
+//			e.printStackTrace();
+//		}
 
 		// TextView中设置相应的课程
 		String mClass[][] = new String[5][11];

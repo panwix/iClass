@@ -43,7 +43,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第一节"
+                    android:text="第1节"
                     android:textColor="#000" />
                 <TextView
                     android:id="@+id/c11"
@@ -88,7 +88,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第二节"
+                    android:text="第2节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c12"
@@ -133,7 +133,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第三节"
+                    android:text="第3节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c13"
@@ -178,7 +178,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第四节"
+                    android:text="第4节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c14"
@@ -223,7 +223,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第五节"
+                    android:text="第5节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c15"
@@ -268,7 +268,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第六节"
+                    android:text="第6节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c16"
@@ -313,7 +313,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第七节"
+                    android:text="第7节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c17"
@@ -359,7 +359,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:text="第八节"
+                    android:text="第8节"
                     android:textColor="#000"/>
                 <TextView
                     android:id="@+id/c18"
@@ -403,7 +403,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="第九节"
+                    android:text="第9节"
                     android:gravity="center"
                     android:textColor="#000"/>
                 <TextView
@@ -448,7 +448,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="第十节"
+                    android:text="第10节"
                     android:gravity="center"
                     android:textColor="#000"/>
                 <TextView
@@ -493,7 +493,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="第十一节"
+                    android:text="第11节"
                     android:gravity="center"
                     android:textColor="#000"/>
                 <TextView

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.panwix.classtable" >
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ii"
+        android:theme="@android:style/Theme.Holo.Light">
+        <activity
+            android:name=".Activitys.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activitys.addActivity"/>
+        <activity android:name=".Activitys.deleteActivity"/>
+        <activity android:name=".Activitys.showActivity"/>
+        <activity android:name=".Activitys.settingActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth">
+        </activity>
+        <activity android:name=".Activitys.queryActivity"/>
+
+    </application>
+
+
+
+
+
+
+</manifest>

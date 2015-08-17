@@ -15,8 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="添加"
-            android:textColor="#fff"
-            android:background="@drawable/item_selected"/>
+            android:textColor="#fff"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/delete"

@@ -8,7 +8,8 @@
         android:label="iClass">
         <activity
             android:name=".Activitys.MainActivity"
-            android:label="我的课表">
+            android:label="我的课表"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,16 +17,21 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activitys.addActivity"
+            android:configChanges="orientation|screenSize"
             android:label="添加课程" />
         <activity android:name=".Activitys.deleteActivity"
+            android:configChanges="orientation|screenSize"
             android:label="删除课程" />
         <activity android:name=".Activitys.showActivity"
+            android:configChanges="orientation|screenSize"
             android:label="我的课表" />
         <activity android:name=".Activitys.settingActivity"
+            android:configChanges="orientation|screenSize"
             android:label="设置学期开始日"
             android:theme="@android:style/Theme.Holo.Light.Dialog">
         </activity>
         <activity android:name=".Activitys.queryActivity"
+            android:configChanges="orientation|screenSize"
             android:label="查询" />
         <activity
             android:name="net.youmi.android.AdBrowser"

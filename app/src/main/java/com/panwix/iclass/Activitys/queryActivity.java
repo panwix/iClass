@@ -44,7 +44,9 @@ public class queryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.query);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        // 隐藏状态栏
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+                , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         LinearLayout llm = (LinearLayout) getLayoutInflater().inflate(R.layout.query, null);
         tv = (TextView)findViewById(R.id.tv);
         btn = (Button) findViewById(R.id.btn);

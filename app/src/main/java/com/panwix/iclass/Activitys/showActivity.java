@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.panwix.iclass.R;
@@ -40,7 +41,9 @@ public class showActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.yanshi);
-
+		// 隐藏状态栏
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		tClassname = (TextView)findViewById(R.id.classname);
 		tClassroom = (TextView)findViewById(R.id.classroom);
 		tWeek = (TextView)findViewById(R.id.week);

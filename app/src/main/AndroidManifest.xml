@@ -4,10 +4,11 @@
     <application
         android:hardwareAccelerated="true"
         android:allowBackup="true"
-        android:icon="@drawable/ii">
+        android:icon="@drawable/ii"
+        android:label="iClass">
         <activity
             android:name=".Activitys.MainActivity"
-            android:label="@string/app_name" >
+            android:label="我的课表">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -15,21 +16,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activitys.addActivity"
-            android:label="添加课程"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:label="添加课程" />
         <activity android:name=".Activitys.deleteActivity"
-            android:label="删除课程"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:label="删除课程" />
         <activity android:name=".Activitys.showActivity"
-            android:label="我的课表"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:label="我的课表" />
         <activity android:name=".Activitys.settingActivity"
             android:label="设置学期开始日"
             android:theme="@android:style/Theme.Holo.Light.Dialog">
         </activity>
         <activity android:name=".Activitys.queryActivity"
-            android:label="查询"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:label="查询" />
         <activity
             android:name="net.youmi.android.AdBrowser"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

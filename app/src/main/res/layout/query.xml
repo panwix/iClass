@@ -13,9 +13,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="请输入要查询的课程"
-            android:alpha="0.3"
+            android:textColor="#000"
+            android:alpha="1.0"
             android:singleLine="true"
-            android:layout_weight="4"/>
+            android:layout_weight="4"
+            android:textCursorDrawable="@drawable/color_cursor"/>
         <Button
             android:id="@+id/btn"
             android:layout_width="0dp"

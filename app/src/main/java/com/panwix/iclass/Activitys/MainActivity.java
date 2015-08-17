@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -120,6 +122,16 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 
 	Handler handler = new Handler();
 
+	public LinearLayout add;
+
+	public LinearLayout delete;
+
+	public LinearLayout search;
+
+	public LinearLayout setting;
+
+	public ActionBar ab;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -131,8 +143,12 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 				SpotManager.ORIENTATION_PORTRAIT);
 		SpotManager.getInstance(this).setAnimationType(SpotManager.ANIM_ADVANCE);
 		// 隐藏状态栏
-//		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-//				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+		ab = getActionBar();
+		ab.setTitle("第7周");
 
 		// 设置DrawerLayout
 		//setDrawerList();
@@ -603,6 +619,31 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 					goToActivity(weekNumS, "5", "11");
 				}
 				break;
+			case R.id.add:
+				Intent intent0 = new Intent();
+				intent0.setClass(MainActivity.this, addActivity.class);
+				startActivity(intent0);
+				finish();
+				break;
+			case R.id.delete:
+				Intent intent1 = new Intent();
+				intent1.setClass(MainActivity.this, deleteActivity.class);
+				startActivity(intent1);
+				finish();
+				break;
+			// 查询课程
+			case R.id.search:
+				Intent intent2 = new Intent();
+				intent2.setClass(MainActivity.this, queryActivity.class);
+				startActivity(intent2);
+				finish();
+				break;
+			// 设置课程
+			case R.id.setting:
+				Intent intent3 = new Intent();
+				intent3.setClass(MainActivity.this, settingActivity.class);
+				startActivityForResult(intent3, R.layout.setting);
+				break;
 		}
 	}
 
@@ -656,7 +697,7 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 					Date d2=new Date();
 					weekNum = getWeedNo(d1,d2);
 					String numStr = "第" + weekNum + "周";
-					week.setText(numStr);
+					ab.setTitle(numStr);
 				} catch (ParseException e){
 					e.printStackTrace();
 				}
@@ -700,19 +741,19 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 //	}
 
 	// 自定义ActionBar
-	private void setActionBar(){
-		//自定义ActionBar
-		actionBar = getActionBar();
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		actionBar.setCustomView(R.layout.actionbar);//自定义ActionBar布局
-		actionBar.getCustomView().setOnClickListener(new View.OnClickListener() {
-			//监听事件
-			@Override
-			public void onClick(View v) {
-
-			}
-		});
-	}
+//	private void setActionBar(){
+//		//自定义ActionBar
+//		actionBar = getActionBar();
+//		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//		actionBar.setCustomView(R.layout.actionbar);//自定义ActionBar布局
+//		actionBar.getCustomView().setOnClickListener(new View.OnClickListener() {
+//			//监听事件
+//			@Override
+//			public void onClick(View v) {
+//
+//			}
+//		});
+//	}
 
 	// 初始化界面
 	private void initAcivity(){
@@ -783,23 +824,28 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 		c510 = (TextView)findViewById(R.id.c510);
 		c511 = (TextView)findViewById(R.id.c511);
 
-		//startDate = new Date(2015-7-1);
+		add = (LinearLayout)findViewById(R.id.add);
+		delete = (LinearLayout)findViewById(R.id.delete);
+		search = (LinearLayout)findViewById(R.id.search);
+		setting = (LinearLayout)findViewById(R.id.setting);
+
+		startDate = new Date(2015-7-1);
 		//同样，在读取SharedPreferences数据前要实例化出一个SharedPreferences对象
 		SharedPreferences sharedPreferences= getSharedPreferences("date",
 				Activity.MODE_PRIVATE);
 		// 使用getString方法获得value，注意第2个参数是value的默认值
-//		String sDate =sharedPreferences.getString("date", "2015-8-1");
-//		// 设置第几周
-//		try {
-//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//			Date d1=sdf.parse(sDate);
-//			Date d2=new Date();
-//			weekNum = getWeedNo(d1,d2);
-//			String numStr = "第" + weekNum + "周";
-//			week.setText(numStr);
-//		} catch (ParseException e){
-//			e.printStackTrace();
-//		}
+		String sDate =sharedPreferences.getString("date", "2015-8-1");
+		// 设置第几周
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Date d1=sdf.parse(sDate);
+			Date d2=new Date();
+			weekNum = getWeedNo(d1,d2);
+			String numStr = "第" + weekNum + "周";
+			ab.setTitle(numStr);
+		} catch (ParseException e){
+			e.printStackTrace();
+		}
 
 		// TextView中设置相应的课程
 		String mClass[][] = new String[5][11];
@@ -923,6 +969,10 @@ public class MainActivity extends Activity implements Runnable, View.OnClickList
 		c59.setOnClickListener(this);
 		c510.setOnClickListener(this);
 		c511.setOnClickListener(this);
+		add.setOnClickListener(this);
+		delete.setOnClickListener(this);
+		search.setOnClickListener(this);
+		setting.setOnClickListener(this);
 
 		// 给有课的单元格添加随机底色
 		List<TextView> list = new ArrayList<TextView>();

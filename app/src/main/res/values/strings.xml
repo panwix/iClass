@@ -9,4 +9,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
+    <drawable name="clr_pressed">#44ffffff</drawable>
 </resources>

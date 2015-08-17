@@ -5,47 +5,56 @@
     android:background="@drawable/background_black"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_weight="1">
-        <ImageButton
-            android:id="@+id/add"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:text="添加"
+            android:textColor="#fff"
+            android:background="@drawable/item_selected"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_weight="1">
-        <ImageButton
-            android:id="@+id/delete"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/delete"/>
+            android:text="删除"
+            android:textColor="#fff"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_weight="1">
-        <ImageButton
-            android:id="@+id/search"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/search"/>
+            android:text="查询"
+            android:textColor="#fff"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/setting"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_weight="1">
-        <ImageButton
-            android:id="@+id/setting"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/setting"/>
+            android:text="设置"
+            android:textColor="#fff"/>
     </LinearLayout>
 </LinearLayout>

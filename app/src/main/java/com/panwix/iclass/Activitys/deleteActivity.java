@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,6 +28,9 @@ public class deleteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.delete);
+		// 隐藏状态栏
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+				, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		edtWeekStart = (EditText)findViewById(R.id.edtWeedStart);
 		edtWeekEnd = (EditText)findViewById(R.id.edtWeedEnd);

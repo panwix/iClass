@@ -37,7 +37,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
             </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
 
@@ -63,7 +64,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
             <TableRow
@@ -88,7 +90,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
 
@@ -115,7 +118,8 @@
                 style="?android:attr/textViewStyle"
                 android:padding="8dp"
                 android:background="@null"
-                android:layout_weight="5">
+                android:layout_weight="5"
+                android:textCursorDrawable="@drawable/color_cursor">
             </com.panwix.iclass.CustomWidgets.LineEditText>
         </TableRow>
 
@@ -142,7 +146,8 @@
                 style="?android:attr/textViewStyle"
                 android:padding="8dp"
                 android:background="@null"
-                android:layout_weight="5">
+                android:layout_weight="5"
+                android:textCursorDrawable="@drawable/color_cursor">
             </com.panwix.iclass.CustomWidgets.LineEditText>
         </TableRow>
             <TableRow
@@ -168,7 +173,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
             <TableRow
@@ -194,7 +200,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
         <TableRow
@@ -220,7 +227,8 @@
                 style="?android:attr/textViewStyle"
                 android:padding="8dp"
                 android:background="@null"
-                android:layout_weight="5">
+                android:layout_weight="5"
+                android:textCursorDrawable="@drawable/color_cursor">
             </com.panwix.iclass.CustomWidgets.LineEditText>
         </TableRow>
 
@@ -246,7 +254,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
             <TableRow
@@ -272,7 +281,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
             <TableRow
@@ -298,7 +308,8 @@
                     style="?android:attr/textViewStyle"
                     android:padding="8dp"
                     android:background="@null"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:textCursorDrawable="@drawable/color_cursor">
                 </com.panwix.iclass.CustomWidgets.LineEditText>
             </TableRow>
             <TableRow
